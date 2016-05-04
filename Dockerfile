@@ -2,10 +2,13 @@ FROM frolvlad/alpine-glibc:alpine-3.3_glibc-2.23
 
 MAINTAINER zopanix <zopanix@gmail.com>
 
+
+RUN mkdir /opt
+
 WORKDIR /opt
 
-COPY ./smart_launch.sh /opt
-COPY ./factorio.crt /opt
+COPY ./smart_launch.sh /opt/
+COPY ./factorio.crt /opt/
 
 
 ENV FACTORIO_AUTOSAVE_INTERVAL=2 \
